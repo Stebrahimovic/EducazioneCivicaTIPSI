@@ -39,6 +39,11 @@ def Punto3(s,n):
     except:
         return False
 
+def Punto4(s,n):
+
+
+    return False
+
 
 try:
     punto=int(input('Quale punto vuoi eseguire: '))
@@ -61,6 +66,12 @@ try:
             n = input('Inserisci n: ')
             if not Punto3(s,n):
                 print('Punto 3 rosso')
+                exit()
+        case 4:
+            s = input('Inserisci s: ')
+            n = input('Inserisci n: ')
+            if not Punto4(s,n):
+                print('Punto 4 rosso')
                 exit()
 except:
     print('Inserisci un numero consentito...')
