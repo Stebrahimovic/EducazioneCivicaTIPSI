@@ -1,3 +1,5 @@
+import math
+
 def Punto1(s,n):
     
     word = ""
@@ -41,8 +43,16 @@ def Punto3(s,n):
 
 def Punto4(s,n):
 
-
-    return False
+    result=1
+    try:
+        n=float(n)
+        for l in s:
+            result*=ord(l)-96
+        result=math.ceil(result/n)
+        print('Punto 4:',result)
+        return True
+    except:
+        return False
 
 
 try:
@@ -73,5 +83,7 @@ try:
             if not Punto4(s,n):
                 print('Punto 4 rosso')
                 exit()
+        case other:
+            print('Questo numero non e\' stato ancora implementato...')
 except:
     print('Inserisci un numero consentito...')
