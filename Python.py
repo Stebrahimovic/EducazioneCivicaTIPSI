@@ -101,6 +101,12 @@ def ControlloEsistenzaFile():
             return False
 
 
+def Punto7(s,n):
+
+
+    return False
+
+
 ControlloEsistenzaFile()
 
 
@@ -143,6 +149,10 @@ try:
         case 6:
             if not Punto6():
                 print('Punto 6 rosso')
+                exit()
+        case 7:
+            if not Punto7():
+                print('Punto 7 rosso')
                 exit()
         case other:
             print('Questo numero non e\' stato ancora implementato...')
