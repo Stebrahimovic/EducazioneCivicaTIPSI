@@ -57,8 +57,15 @@ def Punto4(s,n):
 
 def Punto5(s,n):
 
-
-    return False
+    try:
+        n=int(n)
+        if n%2==0:
+            Punto3(s,n)
+        else:
+            Punto4(s,n)
+        return True
+    except:
+        return False
 
 
 try:
