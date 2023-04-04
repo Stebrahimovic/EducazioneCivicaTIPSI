@@ -28,7 +28,16 @@ def Punto2(s,n):
 
 def Punto3(s,n):
 
-    return False
+    result=0
+    try:
+        n=int(n)
+        for l in s:
+            result+=ord(l)-96
+        result=result*n
+        print('Punto 3:',result)
+        return True
+    except:
+        return False
 
 
 try:
@@ -50,7 +59,7 @@ try:
         case 3:
             s = input('Inserisci s: ')
             n = input('Inserisci n: ')
-            if not Punto2(s,n):
+            if not Punto3(s,n):
                 print('Punto 3 rosso')
                 exit()
 except:
