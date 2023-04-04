@@ -55,6 +55,12 @@ def Punto4(s,n):
         return False
 
 
+def Punto5(s,n):
+
+
+    return False
+
+
 try:
     punto=int(input('Quale punto vuoi eseguire: '))
 
@@ -82,6 +88,12 @@ try:
             n = input('Inserisci n: ')
             if not Punto4(s,n):
                 print('Punto 4 rosso')
+                exit()
+        case 5:
+            s = input('Inserisci s: ')
+            n = input('Inserisci n: ')
+            if not Punto5(s,n):
+                print('Punto 5 rosso')
                 exit()
         case other:
             print('Questo numero non e\' stato ancora implementato...')
