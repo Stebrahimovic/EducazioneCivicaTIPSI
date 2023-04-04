@@ -63,15 +63,47 @@ def Punto5(s,n):
             Punto3(s,n)
         else:
             Punto4(s,n)
+        f=open('./c.txt')
+        c=int(f.read())
+        c+=1
+        f.close()
+        f=open('./c.txt','w')
+        f.write(str(c))
+        f.close()
         return True
-    except:
+    except ConnectionRefusedError:
         return False
 
 
-def Punto6(s,n):
-
-
+def Punto6():
+    # try:
+    f=open('./c.txt')
+    c=int(f.read())
+    f.close()
+    print(c)
+    return True
+    # except:
     return False
+
+
+def ControlloEsistenzaFile():
+    try:
+        f=open('./c.txt')
+        f.close()
+        return True
+    except:
+        try:
+            f=open('./c.txt','w')
+            f.write('0')
+            f.close()
+            return True
+        except:
+            return False
+
+
+ControlloEsistenzaFile()
+
+
 
 
 try:
@@ -109,12 +141,10 @@ try:
                 print('Punto 5 rosso')
                 exit()
         case 6:
-            s = input('Inserisci s: ')
-            n = input('Inserisci n: ')
-            if not Punto6(s,n):
+            if not Punto6():
                 print('Punto 6 rosso')
                 exit()
         case other:
             print('Questo numero non e\' stato ancora implementato...')
-except:
+except ConnectionRefusedError:
     print('Inserisci un numero consentito...')
