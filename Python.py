@@ -11,6 +11,7 @@ def Punto1(s,n):
     except:
         return False
 
+
 def Punto2(s,n):
 
     word = ""
@@ -24,6 +25,12 @@ def Punto2(s,n):
     except:
         return False
 
+
+def Punto3(s,n):
+
+    return False
+
+
 try:
     punto=int(input('Quale punto vuoi eseguire: '))
 
@@ -35,10 +42,16 @@ try:
                 print('Punto 1 rosso')
                 exit()
         case 2:
+            s = input('Inserisci s: ')
+            n = input('Inserisci n: ')
             if not Punto2(s,n):
-                s = input('Inserisci s: ')
-                n = input('Inserisci n: ')
                 print('Punto 2 rosso')
+                exit()
+        case 3:
+            s = input('Inserisci s: ')
+            n = input('Inserisci n: ')
+            if not Punto2(s,n):
+                print('Punto 3 rosso')
                 exit()
 except:
     print('Inserisci un numero consentito...')
