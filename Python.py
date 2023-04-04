@@ -101,10 +101,16 @@ def ControlloEsistenzaFile():
             return False
 
 
-def Punto7(s,n):
+def Punto7(s):
 
-
-    return False
+    try:
+        f=open('./c.txt')
+        c=int(f.read())
+        f.close()
+        Punto5(s,c)
+        return True
+    except:
+        return False
 
 
 ControlloEsistenzaFile()
@@ -151,10 +157,11 @@ try:
                 print('Punto 6 rosso')
                 exit()
         case 7:
-            if not Punto7():
+            s = input('Inserisci s: ')
+            if not Punto7(s):
                 print('Punto 7 rosso')
                 exit()
         case other:
             print('Questo numero non e\' stato ancora implementato...')
-except ConnectionRefusedError:
+except:
     print('Inserisci un numero consentito...')
